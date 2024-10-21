@@ -6,6 +6,8 @@ seaborn
 tqdm
 transformers
 numpy
+albumentations
+opencv-python
 
 # CUDA-enabled torch and torchvision
 --extra-index-url https://download.pytorch.org/whl/cu124
