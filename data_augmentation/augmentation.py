@@ -29,8 +29,8 @@ def augment_image(image):
 def process_folder(classes, num_aug=5):
 
     for char in classes:
-        input_folder = f"{char}_extracted/" # remember to change this!!!
-        output_folder = f"{char}_augmentation/"
+        input_folder = f"extracted/{char}_extracted/" # remember to change this!!!
+        output_folder = f"augmented/{char}_augmented/"
         
         if not os.path.exists(output_folder):
             os.makedirs(output_folder)
@@ -54,4 +54,4 @@ def process_folder(classes, num_aug=5):
                     print(f"Error processing {filename}: {e}")
                     continue
         
-process_folder(['yoimiya'])
+# process_folder(['yoimiya'])
