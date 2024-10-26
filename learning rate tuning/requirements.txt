@@ -1,0 +1,15 @@
+# General packages from PyPI
+pandas
+scikit-learn
+matplotlib
+seaborn
+tqdm
+transformers
+numpy
+albumentations
+opencv-python
+
+# CUDA-enabled torch and torchvision
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.5.0+cu124
+torchvision==0.20.0+cu124

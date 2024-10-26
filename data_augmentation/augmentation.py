@@ -27,7 +27,7 @@ def augment_image(image):
     return augmented['image']
 
 def process_folder(classes, num_aug=5):
-
+    
     for char in classes:
         input_folder = f"extracted/{char}_extracted/" # remember to change this!!!
         output_folder = f"augmented/{char}_augmented/"
