@@ -11,11 +11,9 @@ print(f"CUDA version: {torch.version.cuda}")
 print(f"CUDA available: {torch.cuda.is_available()}")
 print(f"cuDNN available: {torch.backends.cudnn.enabled}")
 
-
 # initialization
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(f'Using device: {device}')
-
 
 # loat ViT parameters and model
 config = ViTConfig.from_pretrained('best_trained_vit_model/config.json')
@@ -27,10 +25,8 @@ classifier = ViTForImageClassification.from_pretrained(
 classifier.to(device)
 classifier.eval()
 
-
 # load YOLOv8
 detector = YOLO('yolov8n.pt')  
-
 
 transform = transforms.Compose([
     transforms.Resize((224, 224)),  
@@ -39,16 +35,13 @@ transform = transforms.Compose([
                          std=[0.229, 0.224, 0.225])
 ])
 
-
-
 # video path
 input_video_path = 'your_video.mp4'      
 output_video_path = 'demo_video.mp4'     
 
-
 cap = cv2.VideoCapture(input_video_path)
 if not cap.isOpened():
-    print(f"无法打开视频文件 {input_video_path}")
+    print(f"Cannot load {input_video_path}")
     exit()
 
 # fetch frame
@@ -97,7 +90,6 @@ while cap.isOpened():
         cv2.putText(frame, label, (x1, y1 - 10),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
     out.write(frame)
-
 
 cap.release()
 out.release()
