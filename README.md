@@ -2,25 +2,22 @@
 
 
 
-### Current directory structure
+### Directory structure
 
 ```python
 CS5242-PROJECT
-├── data_augmentation/
-│   ├── augmentation.py
-│   ├── requirements.txt
-├── data_cropping/
-│   ├── crop_person.py
-│   ├── requirements.txt
-├── dataset/
-│   ├── amber_extracted/
-│   ├── childe_extracted/
-│   ├── ...
-├── processed_splits/
-│   ├── test/
-│   ├── train/
-│   ├── val/
+├── data_preprocessing/
+│   ├── data_augmentation/
+│   ├── data_cropping/
+├── fine_tuning/
+│   ├── activate_function_tuning/
+│   ├── learning_rate_tuning/
+│   ├── loss_function_tuning
+│   ├── optimizer_tuning
+├── pipeline_inference/
+│   ├── all_inference.py
+│   ├── inference.py
 ├── transformer/
-│   ├── Character_Recognition_ViT.ipynb
+│   ├── Character_recognition_Vit.ipynb/
 │   ├── requirements.txt
 ```
