@@ -2,6 +2,7 @@ import os
 import cv2
 from ultralytics import YOLO
 
+# define folder path
 input_folder = 'C:/Users/jeremy/Downloads/Dori'
 output_folder = 'C:/Users\jeremy/Downloads/dori_new/'
 

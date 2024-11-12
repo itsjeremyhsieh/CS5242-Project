@@ -5,19 +5,12 @@ import cv2
 augmentation_pipeline = A.Compose([
 
     A.Perspective(scale=(0.05, 0.1), p=0.5),
-
     A.ShiftScaleRotate(shift_limit=0.2, scale_limit=0.0, rotate_limit=45, p=0.5),
-
     A.RandomScale(scale_limit=0.4, p=0.5),
-
     A.MotionBlur(blur_limit=5, p=0.5),
-
     A.GaussNoise(var_limit=(50.0, 150.0), p=0.5),
-
     A.RandomShadow(shadow_roi=(0, 0.5, 1, 1), num_shadows_lower=1, num_shadows_upper=2, shadow_dimension=5, p=0.5),
-    
     A.RandomSunFlare(flare_roi=(0, 0.5, 1, 1), angle_lower=0, angle_upper=1, num_flare_circles_lower=1, num_flare_circles_upper=2, src_radius=200, p=0.5),
-    
     A.CoarseDropout(max_holes=2, max_height=50, max_width=50, min_holes=1, min_height=20, min_width=20, fill_value=0, p=0.5)
 ])
 
@@ -54,4 +47,3 @@ def process_folder(classes, num_aug=5):
                     print(f"Error processing {filename}: {e}")
                     continue
         
-# process_folder(['yoimiya'])
