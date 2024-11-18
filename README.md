@@ -10,7 +10,7 @@
 ### Introduction
  This project introduces a Vision Transformer (ViT)-based method for recognizing 12 specific characters from the game Genshin Impact in cosplay images. 
  
- ### Steps
+ ### Steps of Execution
  1. Data collection: for each character,  collect a dataset by web-scraping 150 images.
  2. Data preprocessing:
     - First, for all collected images, perform image cropping by running `data_cropping/crop_person.py`. 
@@ -22,8 +22,8 @@
     - to inference on image, run `image_inference.ipynb`
     - to inference on video, run `all_inference.py`
 
-Note: for each specific folder, there is also a `requirements.txt` file. Specified packages must be installed first in order to successfully execute the script. Install the script by running `pip install -r requirements.txt`  
-Note: dataset should be located at the `root` directory. To perform inference, model weight should be placed under the `pipeline_inference` folder
+**Note**: for each specific folder, there is also a `requirements.txt` file. Specified packages must be installed first in order to successfully execute the script. Install the script by running `pip install -r requirements.txt`  
+**Note**: dataset should be located at the `root` directory. To perform inference, model weight should be placed under the `pipeline_inference` folder
 
 ### Directory Structure
 
