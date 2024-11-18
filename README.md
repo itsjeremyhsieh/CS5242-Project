@@ -22,7 +22,7 @@
     - to inference on image, run `image_inference.ipynb`
     - to inference on video, run `all_inference.py`
 
-Note: for each specific folder, there is also a `requirements.txt` file. Specified packages must be installed first in order to successfully execute the script. Install the script by running `pip install -r requirements.txt`
+Note: for each specific folder, there is also a `requirements.txt` file. Specified packages must be installed first in order to successfully execute the script. Install the script by running `pip install -r requirements.txt`  
 Note: dataset should be located at the `root` directory. To perform inference, model weight should be placed under the `pipeline_inference` folder
 
 ### Directory Structure
